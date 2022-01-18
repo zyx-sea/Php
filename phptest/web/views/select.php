@@ -31,8 +31,8 @@
                     <div class="form-box">
                         <div class="layui-form layui-form-item">
                             <div class="layui-inline" >
-                              <!-- 提交查询条件到tiexi.php-->
-                              <form class="login-form" action="../views/tiexi.php" method="post">
+                              <!-- 提交查询条件到select.php-->
+                              <form class="login-form" action="../views/select.php" method="post">
                                 <div class="layui-form-mid">商户名:</div>
                                 <div class="layui-input-inline" style="width: 100px;">
                                   <input type="text" autocomplete="off" class="layui-input" name="uid" value="">
@@ -52,7 +52,7 @@
                         </div>
                         <button class="layui-btn layui-btn-blue">
                           <i class="layui-icon" href="views/form.html">&#xe654;</i>
-                          <a href="views/form.html">新增</a>
+                          <a href="../views/add.php">新增</a>
                         </button>
                         <table id="demo"></table>
                     </div>
@@ -118,7 +118,7 @@ function shjg_show_html(){
 
     $mer_select_list=$mssql->getAll_array_string($sql);
     
-    echo '<table border="0.8" width="1020"  align="center">';
+    echo '<table border="0.8" width="95%"  align="center">';
     echo '<tr bgcolor="#dddddd">';
     echo '<th>参考号</th><th>外部交易号</th><th>交易时间</th><th>商户号</th><th>交易金额</th><th>分期补贴</th>';
     echo '</tr>';

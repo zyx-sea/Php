@@ -13,8 +13,8 @@ require_once ('mssql.php');
 echo "打印测试，sql语句 <br>";
 //执行方法
 //userliset();
-show_totable();
-
+//show_totable();
+add_date();
 //结果集显示
 function userliset(){
     global $mssql;
@@ -71,7 +71,20 @@ function show_totable(){
     }
     print_r("</table>");
 }
-     
+function add_date(){
+    global $mssql;
+
+    $sql = " INSERT INTO zhouyx.dbo.butie_QJZ5 
+    VALUES('211','2','3','4','5','6') ";
+
+    echo  $sql ;
+    $result = $mssql->query($sql);
+    if( !$result ) {
+        alert("添加失败！");
+    }else{
+        alert("添加成功！");
+    }
+}    
 	?>
 	
     </body>

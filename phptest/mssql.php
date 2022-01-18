@@ -46,6 +46,7 @@ class mssql_DB {
         $result = sqlsrv_query($this->con, $sql);
         if( !$result ) {
             die( $this-> sqlsrv_errors_utf8());
+            
         }
         return $result;
     }
